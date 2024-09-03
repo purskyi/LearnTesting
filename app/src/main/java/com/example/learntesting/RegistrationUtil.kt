@@ -17,8 +17,23 @@ object RegistrationUtil {
         password:String,
         confirmedPassword:String
     ):Boolean{
-
-
+        if (username.isEmpty()) {
+            return false
+        }
+        if (password.isEmpty() || confirmedPassword.isEmpty()) {
+            return false
+        }
+        if (password != confirmedPassword) {
+            return false
+        }
+        if (password.length < 8)
+        {
+            return false
+        }
+        if (username in existingUsers)
+        {
+            return false
+        }
 
         return true
     }
