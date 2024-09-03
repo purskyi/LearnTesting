@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.core.ktx)
 
     testImplementation(libs.junit)
 
@@ -71,5 +72,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     testImplementation("com.google.truth:truth:1.0.1")
-
+    androidTestImplementation("com.google.truth:truth:1.0.1")
 }
